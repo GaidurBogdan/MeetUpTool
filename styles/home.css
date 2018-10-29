@@ -95,12 +95,19 @@ body {
 
 /*START CONTACT PAGE REGION*/
 
+#contactPage {
+    overflow: hidden;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
 .contact__container {
     background-color: #303030;
     width: 40%;
     margin: 150px auto 0;
     color: white;
     padding: 10px;
+    border-radius: 15px;
 }
 
 .contact__title {
