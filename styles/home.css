@@ -12,6 +12,10 @@ body {
     outline: 0;
 }
 
+.link {
+    text-decoration: none;
+}
+
 /*START HOME PAGE REGION*/
 .body__wrapper {
     background: url('../images/library-background.jpg') no-repeat center center;
@@ -44,36 +48,22 @@ body {
 
 .user__container {
     transition: all 0.3s;
-    width: 80%;
-    border: 1px solid gray;
-    margin: 10px auto;
-    display: flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 30px;
+    width: 20%;
+    margin: 25px;
+    display: inline-block;
+    padding: 20px 10px 12px;
+    background-color: #ebeeef;
 }
 
 .user__container:hover {
-    background-color: lavender;
-}
-
-.user__name {
-    width: 30%;
-    font-size: 13px;
-    color: #1c2117;
-    font-weight: 700;
-    margin-left: 20px;
-}
-
-.user__last__active {
-    margin-left: 30px;
-    width: 40%;
+    background-color: white;
 }
 
 .user__avatar {
     border: 0.5px solid grey;
-    height: 40px;
-    width: 40px;
+    height: 65px;
+    width: 65px;
+    margin: auto;
     border-radius: 50%;
 }
 
@@ -89,6 +79,31 @@ body {
     background-size:     cover;                    
     background-repeat:   no-repeat;
     background-position: center center;   
+}
+
+.user__name {
+    font-size: 13px;
+    color: #1c2117;
+    font-weight: 700;
+    margin: 10px auto 0;
+    width: fit-content;
+}
+
+.user__last__active {
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #999;
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+    width: fit-content; 
+}
+
+.user__message__button, .user__friend__button {
+    font-size: 10px;
+    width: 50%;
+    margin: auto;
 }
 
 /*END HOME PAGE REGION*/
