@@ -1,3 +1,7 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
 body {
     margin: 0;
 }
@@ -16,12 +20,26 @@ body {
     text-decoration: none;
 }
 
+.section__title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.submit__button {
+    width: 80px;
+    height: 40px;
+    background-color: #b12928;
+    color: #f6f6f6;
+}
+
 /*START HOME PAGE REGION*/
 .body__wrapper {
     background: url('../images/library-background.jpg') no-repeat center center;
     width: 100%;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .feed__container {
@@ -36,11 +54,12 @@ body {
 .feed__section {
     width: 100%;
     margin: 10px 0 20px;
-    
+    position: relative;
+    height: 500px;
 }
 
 .feed__section__title {
-    margin: auto;
+    margin: 10px auto;
     font-size: 22px;
     width: fit-content;
     border-bottom: 1px solid black;
@@ -48,15 +67,16 @@ body {
 
 .user__container {
     transition: all 0.3s;
-    width: 20%;
-    margin: 25px;
-    display: inline-block;
+    float: left;
+    width: 25%;
+    margin: 10px;
     padding: 20px 10px 12px;
     background-color: #ebeeef;
 }
 
 .user__container:hover {
-    background-color: white;
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
 }
 
 .user__avatar {
@@ -64,6 +84,7 @@ body {
     height: 65px;
     width: 65px;
     margin: auto;
+    padding: 5px;
     border-radius: 50%;
 }
 
@@ -161,15 +182,89 @@ body {
     border: none;
 }
 
-.contact__submit__button {
-    width: 80px;
-    height: 40px;
-    background-color: #b12928;
-    color: #f6f6f6;
-}
-
 .button:hover {
     cursor: pointer;
     background-color: #e80a09;
 }
 /*END CONTACT PAGE REGION*/
+
+/*START USERS PAGE REGION*/
+
+.page__container {
+    background-color: whitesmoke;
+    margin-top: 150px;
+    padding: 30px;
+    display: flex;
+}
+
+.users__wrapper {
+    width: 70%;
+}
+
+.users__container {
+    width: 100%;
+    margin: 10px 0 0;
+    position: relative;
+    height: 500px;
+}
+
+#usersPage .section__title {
+    margin-left: 10px;
+}
+
+.users__search__container {
+    border: 1px solid #e5e5e5;
+    padding: 25px 20px;
+    margin: 0;
+}
+
+#usersPage .users__search__container .section__title {
+    margin: 20px 0;
+}
+
+.search__field__description {
+    color: rgb(119, 119, 119);
+    margin: 10px 0;
+}
+
+.search__field {
+    width: 100%;
+    margin: 10px 0 20px ;
+}
+
+/*END USERS PAGE REGION*/
+
+/*START DESIGN RESPONSIVENESS REGION*/
+
+@media screen and (max-width: 1024px) {
+    .feed__container {
+        width: 75%;
+    }
+
+    .contact__container {
+        width: 60%;
+    }
+}
+
+/*tablet size*/
+@media screen and (max-width: 768px) {
+    .page__container {
+        display: block;
+    }
+
+    .users__wrapper {
+        width: unset;
+    }
+
+    .feed__container {
+        width: 100%;
+    }
+
+    .contact__container {
+        width: 80%;
+    }
+}
+
+
+
+/*END DESIGN RESPONSIVENESS REGION*/
