@@ -38,8 +38,6 @@ body {
 .body__wrapper {
     background: url('../images/library-background.jpg') no-repeat center center;
     width: 100%;
-    height: 100vh;
-    overflow: auto;
 }
 
 .feed__container {
@@ -192,7 +190,6 @@ body {
 
 .page__container {
     background-color: whitesmoke;
-    margin-top: 150px;
     padding: 30px;
     display: flex;
 }
