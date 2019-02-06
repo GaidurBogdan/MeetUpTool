@@ -9,6 +9,7 @@ body {
     overflow: hidden;
     background-color: #000000;
     padding: 10px 10px;
+    z-index: 5; 
 }
 
 .header a {
@@ -52,15 +53,16 @@ body {
 }
 
 .dropdown__community__table{
-    display:none;
+    display: none;
+    position: absolute;
     background-color: black;
     color:white;
     text-align: center;
-    border-top: solid 2px black;
     width:auto;
-    margin-top:15px;
+    margin-top:12px;
     margin-left:-20px;
-    border-radius: 20%;
+    border-radius: 10%;
+    z-index: 10;
 }
 
 .dropdown__community:hover .dropdown__community__table{
@@ -72,14 +74,24 @@ body {
     text-align: center;
     position: fixed;
 }
+
 .community__menu{
     position:relative;
     text-decoration-color: white;
     padding: 5px 10px 5px 10px;
-    border: solid 0.5px darkgray;
+    height: fit-content;
+    padding: 0;
+    margin: 0 15px;
+    line-height: 15px;
 }
 
+.community__menu:hover {
+    border-bottom: 1px solid white;
+}
 
+.community__menu:last-of-type {
+    margin-bottom: 10px;
+}
 
 @media screen and (max-width: 500px) {
     .header a {

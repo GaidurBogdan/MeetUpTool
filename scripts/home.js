@@ -5,6 +5,8 @@ document.addEventListener('click', function (event) {
 
 	if (event.target.matches('.chat__bubble')) {
         let bubble = event.target;
+        
+        bubble.classList.remove("unread__message");
 
         if (chatContainer.classList.contains("hidden")) {
             chatContainer.classList.remove("hidden");
