@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+.hidden {
+    height: 0 !important;
+    opacity: 0 !important;
+}
+
 .button {
     transition: 0.3s all;
     border: none;
@@ -125,6 +130,10 @@ body {
     margin: auto;
 }
 
+.user__buttons__container {
+    text-align: center;
+}
+
 /*END HOME PAGE REGION*/
 
 /*START CONTACT PAGE REGION*/
@@ -230,6 +239,117 @@ body {
 }
 
 /*END USERS PAGE REGION*/
+
+/*START CHAT REGION*/
+
+.chat__wrapper {
+    position: fixed;
+    bottom: 100px;
+    z-index: 100;
+    background: transparent;
+    right: 0;
+    padding: 0 20px;
+}
+
+.conversation__wrapper.unread__message .chat__bubble{
+    border: 2px solid red;
+}
+
+.chat__bubbles__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.chat__bubble {
+    background-image: url("../images/student_boy_avatar.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 15px white;
+}
+
+.chat__bubble.highlighted {
+    border: 1px solid blue;
+}
+
+.op__name {
+    margin: -3px 0;
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+.chat__container {
+    padding: 5px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 13px;
+    transition: 0.4s all;
+    overflow: hidden;
+}
+
+.user__message, .op__message {
+    width: fit-content;
+    border-radius: 15px;
+    padding: 3px 10px;
+    font-size: 14px;
+    color: white;
+    width: 75%;
+    position: relative;
+    margin: 5px 0;
+}
+
+.op__message {
+    float: left;
+    background-color:limegreen;
+}
+
+.user__message {
+    background-color: #CCCD20;
+    float: right; 
+}
+
+.write__message__section {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.message__input {
+    width: 75%;
+}
+
+.send__message__button {
+    text-align:  center;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.send__message__button:hover {
+    background-color: #00d5fd;
+}
+
+.conversation__history__section {
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #a39eb1;
+    overflow: auto;
+    height: 85%;
+}
+
+/*END CHAT REGION*/
 
 /*START DESIGN RESPONSIVENESS REGION*/
 

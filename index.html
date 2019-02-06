@@ -10,7 +10,6 @@
     <link rel="stylesheet" type="text/css" media="screen" href="styles/header.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="styles/footer.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-    <script src="scripts/home.js"></script>
 </head>
 
 <header class="header">
@@ -47,8 +46,10 @@
                     <div class="user__last__active">
                         Active 5min ago    
                     </div>
-                    <a href="" class="user__message__button link">Message!</a>
-                    <a href="" class="user__friend__button link">Add Friend</a>
+                    <div class = "user__buttons__container">
+                        <a href="" class="user__message__button link">Message!</a>
+                        <a href="" class="user__friend__button link">Add Friend</a>
+                    </div>
                 </div>
 
                 <div class="user__container">
@@ -59,8 +60,10 @@
                     <div class="user__last__active">
                         Active 3h ago    
                     </div>
-                    <a href="" class="user__message__button link">Message!</a>
-                    <a href="" class="user__friend__button link">Add Friend</a>
+                    <div class = "user__buttons__container">
+                        <a href="" class="user__message__button link">Message!</a>
+                        <a href="" class="user__friend__button link">Add Friend</a>
+                    </div>
                 </div>
                 
                 <div class="user__container">
@@ -71,8 +74,10 @@
                     <div class="user__last__active">
                         Active 2h ago    
                     </div>
-                    <a href="" class="user__message__button link">Message!</a>
-                    <a href="" class="user__friend__button link">Add Friend</a>
+                    <div class = "user__buttons__container">
+                        <a href="" class="user__message__button link">Message!</a>
+                        <a href="" class="user__friend__button link">Add Friend</a>
+                    </div>
                 </div>
 
                 <div class="user__container">
@@ -83,10 +88,39 @@
                     <div class="user__last__active">
                         Active 5min ago    
                     </div>
-                    <a href="" class="user__message__button link">Message!</a>
-                    <a href="" class="user__friend__button link">Add Friend</a>
+                    <div class = "user__buttons__container">
+                        <a href="" class="user__message__button link">Message!</a>
+                        <a href="" class="user__friend__button link">Add Friend</a>
+                    </div>
                 </div>
             </section>  
+        </div>
+    </div>
+    <div class="chat__wrapper wrapper">
+        <div class="conversation__wrapper" >
+            <ul class="chat__bubbles__list">
+                <li class="chat__bubble" id="Friend1"></li>
+                <li class="chat__bubble" id="Friend2"></li>
+            </ul>
+            <div class="chat__container hidden">
+                <h2 class="op__name">Daniel Wiggleton</h2>
+                <div class="conversation__history__section">
+                    <p class="user__message">My message</p>
+                    <p class="op__message">His message</p>
+                    <p class="user__message">My message again</p>
+                    <p class="op__message">His message again</p>
+                    <p class="user__message">My message</p>
+                    <p class="user__message">My message loooooooooooooooong and boooooring</p>
+                    <p class="user__message">My message</p>
+                    <p class="user__message">My message</p>
+                </div>
+                <div class="write__message__section">
+                    <input class="message__input">
+                    <button type="submit" class="send__message__button button">
+                        Send
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
@@ -94,5 +128,7 @@
 <footer class="footer">
     Find us //Facebook API + Twitter API + Github API//
 </footer>
+
+<script src="scripts/home.js"></script>
 
 </html>
