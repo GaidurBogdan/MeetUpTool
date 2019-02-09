@@ -1,10 +1,4 @@
 //check for login status
-auth.onAuthStateChanged(user => {
-    if (user == null) {
-        window.location.replace("pages/login.html");
-    }
-    console.log(user);
-});
 
 var chatBubbles = document.getElementsByClassName("chat__bubble");
 var chatContainer = document.getElementsByClassName("chat__container")[0];

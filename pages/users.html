@@ -29,6 +29,7 @@
         </a>
         <a href="calendar.html">Calendar</a>
         <a href="contact.html">Contact</a>
+        <a id="signout">Sign out</a>
     </div>
 </header>
 
@@ -108,5 +109,25 @@
 </footer>
 
 
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBtBKgcONk3JNkrN1e52SSmMa_qaduuSBU",
+    authDomain: "meetup-48c2d.firebaseapp.com",
+    databaseURL: "https://meetup-48c2d.firebaseio.com",
+    projectId: "meetup-48c2d",
+    storageBucket: "meetup-48c2d.appspot.com",
+    messagingSenderId: "1036777057393"
+  };
+  firebase.initializeApp(config);
+
+  const auth = firebase.auth();
+  const db = firebase.firestore();
+</script>
+
+<script src="../scripts/signout.js"></script>
 
 </html>
