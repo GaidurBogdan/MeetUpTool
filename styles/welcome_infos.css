@@ -150,3 +150,24 @@ body {
     box-shadow: 0 0 4px #999;
     outline: none;
 }
+
+@media only screen and (max-width: 551px) {
+    .infos_container{
+        width: 85%;
+    }
+    .first_text, .welcome_title_text{
+        font-size: medium;
+    }
+    .form_section{
+        padding-left:10px;
+    }
+    .welcome_title_text{
+        padding-bottom:15px;
+    }
+}
+
+@media only screen and (max-width: 750px) and (min-width: 552px){
+    .first_text, .welcome_title_text{
+        font-size: large;
+    }
+}
