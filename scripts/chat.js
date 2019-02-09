@@ -1,7 +1,6 @@
 class Conversation {
-    constructor(height, width) {
-        this.height = height;
-        this.width = width;
+    constructor() {
+        
     }
 
     renderChatBubble (params) {

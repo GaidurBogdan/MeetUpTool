@@ -170,6 +170,11 @@ body {
     cursor: pointer;
 }
 
+.forgot__password__link a {
+    color: white;
+    text-decoration: none;
+}
+
 .forgot__password__link:hover {
     background-color: black;
 }

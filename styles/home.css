@@ -324,6 +324,7 @@ body {
     width: 75%;
     position: relative;
     margin: 5px 0;
+    word-break: break-all;
 }
 
 .op__message {

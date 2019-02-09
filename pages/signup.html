@@ -7,21 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../styles/footer.css"/>
 
-    <title>Login </title>
+    <title>Sign up </title>
 </head>
 
 <body>
 
 <div class="login__container">
     <div id="overlay">
-        <div class="login__welcoming__text__wide">Are you ready to MeetUp
-            with your friends ?
+        <div class="login__welcoming__text__wide">Sign up and jump right in!
         </div>
         <div class="login__welcoming__text__short">MeetUP - Better together
         </div>
     </div>
-    <form method="POST" action="login/makeLogin" class="form__container">
-
+    <form class="form__container">
         <div class="form__line__container">
             <div class="label__container">
                 <label class="field__label">
@@ -44,22 +42,20 @@
             </div>
         </div>
         <div class="form__line__container">
-            <button class="login__button" id="login">Login</button>
-
+            <button type = "submit" class="login__button" id="signup">Sign up</button>
         </div>
     </form>
     <div class="form__container">
         <div class="checkboxes__container">
             <div class="forgot__password__container">
-                <a href="signup.html"> 
+                <a href="login.html"> 
                     <button class="forgot__password__link">
-                        First time? Sign up here!
+                        Already a member? Login here!
                     </button>
                 </a>
             </div>
         </div>
     </div>
-
 </div>
 </body>
 
@@ -81,5 +77,6 @@
   const auth = firebase.auth();
   const db = firebase.firestore();
 </script>
-<script src="../scripts/login.js"></script>
+<script src="../scripts/signup.js"></script>
+
 </html>
