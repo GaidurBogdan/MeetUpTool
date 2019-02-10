@@ -26,6 +26,10 @@ body {
     border-top: solid 2px black;
 }
 
+#signout {
+    cursor: pointer;
+}
+
 .header a.logo {
     font-size: 25px;
     font-weight: bold;

@@ -26,6 +26,7 @@
         </a>
         <a href="pages/calendar.html">Calendar</a>
         <a href="pages/contact.html">Contact</a>
+        <a id="signout">Sign out</a>
     </div>
 </header>
 
@@ -36,91 +37,25 @@
         <div class="feed__container">
             <section class="feed__section">
                 <h2 class="feed__section__title">
-                    People at #location# right now - 5 
+                    People at #location# right now - 
                 </h2>
-
-                <div class="user__container">
-                    <div class="user__avatar boy"></div>
-                    <div class="user__name">
-                        Peter Strongman
-                    </div>
-                    <div class="user__last__active">
-                        Active 5min ago    
-                    </div>
-                    <div class = "user__buttons__container">
-                        <a href="" class="user__message__button link">Message!</a>
-                        <a href="" class="user__friend__button link">Add Friend</a>
-                    </div>
-                </div>
-
-                <div class="user__container">
-                    <div class="user__avatar girl"></div>
-                    <div class="user__name">
-                            Christina Selman
-                        </div>
-                    <div class="user__last__active">
-                        Active 3h ago    
-                    </div>
-                    <div class = "user__buttons__container">
-                        <a href="" class="user__message__button link">Message!</a>
-                        <a href="" class="user__friend__button link">Add Friend</a>
-                    </div>
-                </div>
-                
-                <div class="user__container">
-                    <div class="user__avatar girl"></div>
-                    <div class="user__name">
-                            Gina Wellfare
-                        </div>
-                    <div class="user__last__active">
-                        Active 2h ago    
-                    </div>
-                    <div class = "user__buttons__container">
-                        <a href="" class="user__message__button link">Message!</a>
-                        <a href="" class="user__friend__button link">Add Friend</a>
-                    </div>
-                </div>
-
-                <div class="user__container">
-                    <div class="user__avatar boy"></div>
-                    <div class="user__name">
-                        Daniel  Wiggleton
-                    </div>
-                    <div class="user__last__active">
-                        Active 5min ago    
-                    </div>
-                    <div class = "user__buttons__container">
-                        <a href="" class="user__message__button link">Message!</a>
-                        <a href="" class="user__friend__button link">Add Friend</a>
-                    </div>
-                </div>
             </section>  
         </div>
     </div>
     <div class="chat__wrapper wrapper">
         <div class="conversation__wrapper" >
             <ul class="chat__bubbles__list">
-                <li class="chat__bubble" id="Friend1"></li>
-                <li class="chat__bubble" id="Friend2"></li>
             </ul>
             <div class="chat__container hidden">
-                <h2 class="op__name">Daniel Wiggleton</h2>
+                <h2 class="op__name">Other person's name</h2>
                 <div class="conversation__history__section">
-                    <p class="user__message">My message</p>
-                    <p class="op__message">His message</p>
-                    <p class="user__message">My message again</p>
-                    <p class="op__message">His message again</p>
-                    <p class="user__message">My message</p>
-                    <p class="user__message">My message loooooooooooooooong and boooooring</p>
-                    <p class="user__message">My message</p>
-                    <p class="user__message">My message</p>
                 </div>
-                <div class="write__message__section">
-                    <input class="message__input">
+                <form class="write__message__section">
+                    <input type="text" class="message__input">
                     <button type="submit" class="send__message__button button">
                         Send
                     </button>
-                </div>
+                </form>
             </div>
         </div>
     </div>
@@ -148,6 +83,10 @@
   const auth = firebase.auth();
   const db = firebase.firestore();
 </script>
+
+<script src="scripts/classes.js"></script>
+<script src="scripts/signout.js"></script>
 <script src="scripts/home.js"></script>
 <script src="scripts/chat.js"></script>
+
 </html>
