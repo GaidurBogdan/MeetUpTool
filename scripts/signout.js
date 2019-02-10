@@ -13,5 +13,5 @@ auth.onAuthStateChanged(user => {
             window.location.replace("login.html");
         }
     }
-    console.log(user);
+    console.log(user.email);
 });

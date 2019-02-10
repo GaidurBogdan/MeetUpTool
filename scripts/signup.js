@@ -7,11 +7,21 @@ signupForm.addEventListener('submit', (e) => {
     var password = document.getElementById('password').value;
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
-        window.location.replace("../index.html"); 
+        console.log("User created.");
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
         var errorMessage = error.message;
         alert(error.message);
     });
+
+    auth.onAuthStateChanged((user) => {
+        db.collection('users').doc(user.uid).set({
+            email: email,
+            firstName: "FirstName",
+            lastName: "LastName"
+        }).then(returnedValue => {
+            window.location.replace("../index.html"); 
+            });
+      });
 } );
