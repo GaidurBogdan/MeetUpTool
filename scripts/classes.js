@@ -6,11 +6,21 @@ class Conversation {
     }
 
     renderChatBubble () {
-        let chatBubble = document.createElement("li");
-        chatBubble.className = "chat__bubble";
-        chatBubble.style.backgroundImage = this.imageURL;
-        chatBubble.id = this.userID;
-        document.getElementsByClassName("chat__bubbles__list")[0].appendChild(chatBubble);
+        var alreadyExists = false;
+        var children = document.getElementsByClassName("chat__bubbles__list")[0].children;
+        for (var i = 0; i < children.length; i++) {
+            var child = children[i];
+            if (child.id == this.userID) {
+                alreadyExists = true;
+            }
+        }
+        if (alreadyExists == false) {
+            let chatBubble = document.createElement("li");
+            chatBubble.className = "chat__bubble";
+            chatBubble.style.backgroundImage = this.imageURL;
+            chatBubble.id = this.userID;
+            document.getElementsByClassName("chat__bubbles__list")[0].appendChild(chatBubble);
+        }
     }
 
     replaceChatHistory (messagesList) {
