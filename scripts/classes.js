@@ -10,6 +10,9 @@ class Conversation {
         var children = document.getElementsByClassName("chat__bubbles__list")[0].children;
         for (var i = 0; i < children.length; i++) {
             var child = children[i];
+            if (!chatContainer.classList.contains("hidden")) {
+                child.classList.remove("highlighted");
+            }
             if (child.id == this.userID) {
                 alreadyExists = true;
             }
@@ -17,6 +20,9 @@ class Conversation {
         if (alreadyExists == false) {
             let chatBubble = document.createElement("li");
             chatBubble.className = "chat__bubble";
+            if (!chatContainer.classList.contains("hidden")) {
+                chatBubble.classList.add("highlighted");
+            }
             chatBubble.style.backgroundImage = this.imageURL;
             chatBubble.id = this.userID;
             document.getElementsByClassName("chat__bubbles__list")[0].appendChild(chatBubble);
