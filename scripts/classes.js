@@ -49,6 +49,10 @@ class Conversation {
                 conversationHistory.appendChild(opMessage);
             }
         });
+
+        //fix scroll in chat
+        var convo = document.getElementsByClassName("conversation__history__section")[0];
+        convo.scrollTop = convo.scrollHeight;
     }
 }
 

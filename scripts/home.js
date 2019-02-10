@@ -114,6 +114,11 @@ document.addEventListener('submit', function (event) {
                 sender: myID,
                 actualMessage: document.getElementsByClassName("message__input")[0].value
             });
+            
+            if (document.getElementsByClassName("message__input")[0].value == "") {
+                conversation.messages.pop();
+            }
+
             document.getElementsByClassName("message__input")[0].value = "";
             db.collection("conversations").doc(conversationID).update(conversation);
 
