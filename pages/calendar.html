@@ -33,81 +33,122 @@
 </header>
 
 <body id="calendarPage">
-    <div class="container">
-
-        <div class="calendar-base">
-
-            <div class="year">2018</div>
-            <div class="triangle-left"></div>
-            <div class="triangle-right"></div>
-
-            <div class="months">
-                <span class="month-hover">Jan</span>
-                <span class="month-hover">Feb</span>
-                <span class="month-hover">Mar</span>
-                <span class="month-hover">Apr</span>
-                <span class="month-hover">May</span>
-                <span class="month-hover">Jun</span>
-                <span class="month-hover">July</span>
-                <span class="month-hover">Aug</span>
-                <span class="month-hover">Sep</span>
-                <span class="month-hover">Oct</span>
-                <strong class="month-color">Nov</strong>
-                <span class="month-hover">Dec</span>
+    <div class="calendar_container">
+        <div class="card">
+            <div class="buttons_and_month">
+            <div class="header_container">
+                <div class="previous_button">
+                    <button id="previous" onclick="previous()"></button>
+                </div>
+                <div class="card-header" id="monthAndYear"><br></div>
+                <div class="next_button">
+                    <button class="next_button" id="next" onclick="next()"></button>
+                </div>
             </div>
-            <hr class="month-line" />
-
-            <div class="days">SUN MON TUE WED THU FRI SAT</div>
-
-            <div class="num-dates">
-
-                <div class="first-week"><span class="grey">28 29 30 31</span> 01 02 03</div>
-                <!-- first week -->
-                <div class="second-week">04 05 06 07 08 09 10</div>
-                <!-- week -->
-                <div class="third-week"> 11 12 13 14 15 16 17</div>
-                <!-- week -->
-                <div class="fourth-week"> 18 19 20 21 22 23 24</div>
-                <!-- week -->
-                <div class="fifth-week"> 25 26 27 28 29 30 <span class="grey">01</span></div>
-                <!-- week -->
-                <div class="sixth-week"><span class="grey">02 03 04 05 06 07 08</span></div>
-                <!-- week -->
-            </div>
-            <div class="event-indicator"></div>
-            <div class="active-day"></div>
-            <div class="event-indicator two"></div>
-
-        </div>
-        <div class="calendar-left">
-
-            <div class="hamburger">
-                <div class="burger-line"></div>
-                <!-- burger-line -->
-                <div class="burger-line"></div>
-                <!-- burger-line -->
-                <div class="burger-line"></div>
-                <!-- burger-line -->
-            </div>
-            <!-- hamburger -->
-
-
-            <div class="num-date">01</div>
-            <div class="day">THURSDAY</div>
-            <div class="current-events">Current Events
-                <br/>
-                <ul>
-                    <li>Day 01 </li>
-                </ul>
-                <span class="posts">See post events</span></div>
-
-            <div class="create-event">Create an Event</div>
-            <hr class="event-line" />
-            <div class="add-event"><span class="add">+</span></div>
-
         </div>
 
+            <div class="line_container">
+                <div class="line"></div>
+            </div>
+
+        <table class="calendar_body">
+            <thead>
+                <tr>
+                    <th class="weekend_dates">SUN</th>
+                    <th class="regular_dates">MON</th>
+                    <th class="regular_dates">TUE</th>
+                    <th class="regular_dates">WED</th>
+                    <th class="regular_dates">THU</th>
+                    <th class="regular_dates">FRI</th>
+                    <th class="weekend_dates">SAT</th>
+                </tr>
+            </thead>
+
+            <tbody id="calendar-body"></tbody>
+
+            </table>
+        <br/>
+
+        <form class="form-inline">
+            <label class="date_picker" for="month">Jump To: </label>
+            <select class="selector" name="month" id="month" onchange="jump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>Mar</option>
+                <option value=3>Apr</option>
+                <option value=4>May</option>
+                <option value=5>Jun</option>
+                <option value=6>Jul</option>
+                <option value=7>Aug</option>
+                <option value=8>Sep</option>
+                <option value=9>Oct</option>
+                <option value=10>Nov</option>
+                <option value=11>Dec</option>
+            </select>
+
+            <label for="year"></label>
+            <select class="selector" name="year" id="year" onchange="jump()">
+                <option value=2000>2000</option>
+                <option value=2001>2001</option>
+                <option value=2002>2002</option>
+                <option value=2003>2003</option>
+                <option value=2004>2004</option>
+                <option value=2005>2005</option>
+                <option value=2006>2006</option>
+                <option value=2007>2007</option>
+                <option value=2008>2008</option>
+                <option value=2009>2009</option>
+                <option value=2010>2010</option>
+                <option value=2011>2011</option>
+                <option value=2012>2012</option>
+                <option value=2013>2013</option>
+                <option value=2014>2014</option>
+                <option value=2015>2015</option>
+                <option value=2016>2016</option>
+                <option value=2017>2017</option>
+                <option value=2018>2018</option>
+                <option value=2019>2019</option>
+                <option value=2020>2020</option>
+                <option value=2021>2021</option>
+                <option value=2022>2022</option>
+                <option value=2023>2023</option>
+                <option value=2024>2024</option>
+                <option value=2025>2025</option>
+                <option value=2026>2026</option>
+                <option value=2027>2027</option>
+                <option value=2028>2028</option>
+                <option value=2029>2029</option>
+                <option value=2030>2030</option>
+            </select>
+        </form>
     </div>
+    </div>
+
+    <div class="right_side_calendar_container">
+        <div class="hamburger">
+            <div class="burger_line"></div>
+            <!-- burger-line -->
+            <div class="burger_line"></div>
+            <!-- burger-line -->
+            <div class="burger_line"></div>
+            <!-- burger-line -->
+        </div>
+
+        <div class="num_date">10</div>
+        <!--num-date -->
+        <div class="day">Sunday</div>
+
+        <div class="create_event">Create an Event</div>
+        <div class="create_event_short">Create</div>
+        <!-- create-event -->
+        <div class="add_event"><span class="add">+</span></div>
+        <!-- add-event -->
+        <hr class="event_line" />
+    </div>
+
+<!--<button name="jump" onclick="jump()">Go</button>-->
+<script src="../scripts/calendar_generator.js"></script>
+
 </body>
 
 <footer class="footer">
