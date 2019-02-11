@@ -5,6 +5,7 @@ var chatContainer = document.getElementsByClassName("chat__container")[0];
 
 document.addEventListener('click', function (event) {
 
+    //clicking on a chat bubble event handler
 	if (event.target.matches('.chat__bubble')) {
         let bubble = event.target;
         
@@ -43,11 +44,16 @@ document.addEventListener('click', function (event) {
             document.getElementsByClassName("message__input")[0].value = "";
 
             let conversationEntity = new Conversation(otherPersonName, 'images/student_boy_avatar.png', userID);
-            conversationEntity.replaceChatHistory(conversation.data().messages);
+            //conversationEntity.replaceChatHistory(conversation.data().messages);
+
+            db.collection("conversations").doc(conversation.id).onSnapshot(doc => {
+                conversationEntity.replaceChatHistory(doc.data().messages);
+            });
         });
 
     }
 
+    //clicking on a write message button 
     if (event.target.matches('.user__message__button')) {
         var userID = event.target.parentElement.parentElement.id;
         var myID = auth.currentUser.uid;
@@ -61,7 +67,7 @@ document.addEventListener('click', function (event) {
             snapshot.docs.forEach(doc => {
                 let data = doc.data();
                 if ((data.ID1 == userID &&  data.ID2 == myID) || (data.ID1 == myID && data.ID2 == userID)) {
-                    conversation = doc.data();
+                    conversation = doc;
                 }
             });
             if (conversation == null) {
@@ -78,7 +84,10 @@ document.addEventListener('click', function (event) {
             chatContainer.id = userID;
             let conversationEntity = new Conversation(otherPersonName, 'images/student_boy_avatar.png', userID);
             conversationEntity.renderChatBubble();
-            conversationEntity.replaceChatHistory(conversation.messages);
+
+            db.collection("conversations").doc(conversation.id).onSnapshot(doc => {
+                conversationEntity.replaceChatHistory(doc.data().messages);
+            });
         });
     }
 
@@ -87,6 +96,7 @@ document.addEventListener('click', function (event) {
 document.addEventListener('submit', function (event) {
     event.preventDefault();
 
+    //submit a message in chat
     if (event.target.matches('.write__message__section')) {
         var userID = event.target.parentElement.id;
         var myID = auth.currentUser.uid;
@@ -122,8 +132,8 @@ document.addEventListener('submit', function (event) {
             document.getElementsByClassName("message__input")[0].value = "";
             db.collection("conversations").doc(conversationID).update(conversation);
 
-            let conversationEntity = new Conversation(otherPersonName, 'images/student_boy_avatar.png', userID);
-            conversationEntity.replaceChatHistory(conversation.messages);
+            //let conversationEntity = new Conversation(otherPersonName, 'images/student_boy_avatar.png', userID);
+            //conversationEntity.replaceChatHistory(conversation.messages);
         });
     }
 
@@ -140,5 +150,15 @@ db.collection('users').get().then( (snapshot) => {
 });
 
 
-
-
+//listen to all the conversation the current user is involved in
+/*
+db.collection("conversations").then(snapshot => {
+    snapshot.docs.forEach(doc => {
+        if (doc.data().ID1 == auth.currentUser.uid || doc.data().ID2 == auth.currentUser.uid) {
+            doc.onSnapshot(function(doc) {
+                
+            });
+        }
+    })
+});
+*/
