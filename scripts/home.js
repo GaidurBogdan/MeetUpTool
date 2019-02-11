@@ -157,21 +157,23 @@ document.addEventListener('submit', function (event) {
 //render all users at your location
 
 auth.onAuthStateChanged(user => {
-    db.collection('users').doc(user.uid).get().then(myDoc => {
-        var myLocation = myDoc.data().location;
-        db.collection('users').get().then( (snapshot) => {
-            var nrOfUsers = 0;
-            snapshot.docs.forEach(doc => {
-                if (doc.id != auth.currentUser.uid && doc.data().location == myLocation) {
-                    nrOfUsers ++;
-                    let newUser = new User(doc);
-                    newUser.renderUser(document.getElementsByClassName("feed__section")[0]);
-                }
+    if (window.location.pathname.split("/").pop() == "index.html") {
+        db.collection('users').doc(user.uid).get().then(myDoc => {
+            var myLocation = myDoc.data().location;
+            db.collection('users').get().then( (snapshot) => {
+                var nrOfUsers = 0;
+                snapshot.docs.forEach(doc => {
+                    if (doc.id != auth.currentUser.uid && doc.data().location == myLocation) {
+                        nrOfUsers ++;
+                        let newUser = new User(doc);
+                        newUser.renderUser(document.getElementsByClassName("feed__section")[0]);
+                    }
+                });
+                let sectionTitle = document.getElementsByClassName("feed__section__title")[0];
+                sectionTitle.innerHTML += myLocation + " right now - " + nrOfUsers;
             });
-            let sectionTitle = document.getElementsByClassName("feed__section__title")[0];
-            sectionTitle.innerHTML += myLocation + " right now - " + nrOfUsers;
         });
-    });
+    }
 });
 
 //listen to all the conversation the current user is involved in
