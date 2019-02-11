@@ -105,6 +105,18 @@ tr{
     height: 60px;
 }
 
+td {
+    border-radius: 30px;
+}
+
+td:hover {
+    background-color: #e6e6e6;
+}
+
+td.selected__date {
+    background-color: #cfcdcd;
+}
+
 .regular_dates{
     background-color: #ffffff;
     font-size:large;
@@ -292,23 +304,21 @@ tr{
 /* BIG DATE AND NAME */
 
 .num_date {
+    margin: auto;
     font-size: 150px;
-    width: 50%;
     font-weight: 700;
     padding-top: 20px;
-    padding-left:23%;
     color:white;
     text-align: center;
 }
 
 .day {
-    width: 50%;
+    margin: auto;
     font-size: 30px;
     position: relative;
     padding-bottom: 20px;
     text-align: center;
     color: white;
-    padding-left:37%;
     bottom: 30px;
 }
   /* Create Event section */
@@ -322,6 +332,9 @@ tr{
     color:white;
     width: 70%;
     display:inline-block;
+    background-color: #2ECC71;
+    border: none;
+    outline: 0;
 }
 
 .create_event_short{
@@ -332,6 +345,9 @@ tr{
     color:white;
     width: 70%;
     display:none;
+    background-color: #2ECC71;
+    border: none;
+    outline: 0;
 }
 
 .event_line {
@@ -353,9 +369,10 @@ tr{
     position: relative;
     bottom: 6px;
     left: 3px;
+    cursor: pointer;
 }
 
-.add:hover, .create_event:hover, .add-event:hover{
+.add:hover, .add-event:hover{
     color:#27e879 !important;
     border-color: #27e879 !important;
 }
