@@ -1,0 +1,437 @@
+* {
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+.hidden {
+    height: 0 !important;
+    opacity: 0 !important;
+}
+
+.button {
+    transition: 0.3s all;
+    border: none;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.link {
+    text-decoration: none;
+}
+
+#overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.section__title {
+    margin-bottom: 22px;
+    font-weight: 700;
+    line-height: 28px;
+    font-size: 18px;
+}
+
+.submit__button {
+    width: 80px;
+    height: 40px;
+    background-color: #b12928;
+    color: #f6f6f6;
+    margin-top:10px;
+}
+
+/*START HOME PAGE REGION*/
+.body__wrapper {
+    position: relative;
+    background: url('../images/library-background.jpg') no-repeat center center;
+    width: 100%;
+}
+
+.feed__container {
+    position: relative;
+    background-color: whitesmoke;
+    width: 50%;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid black;
+    margin: 0 auto 0;
+    z-index: 5;
+}
+
+.feed__section {
+    width: 100%;
+    margin: 10px 0 20px;
+    position: relative;
+    height: 500px;
+    overflow: auto;
+}
+
+.feed__section__title {
+    margin: 10px auto;
+    font-size: 22px;
+    width: fit-content;
+    border-bottom: 1px solid black;
+}
+
+.user__container {
+    transition: all 0.3s;
+    float: left;
+    width: 25%;
+    margin: 10px;
+    padding: 20px 10px 12px;
+    background-color: #ebeeef;
+}
+
+.user__image {
+    width: 250px;
+    display: inline-block;
+}
+
+.invitation__search__field{
+    width: 60%;
+    margin: 10px 0 20px ;
+    color: rgb(119, 119, 119);
+    margin-bottom: 10px;
+}
+
+.user__container:hover {
+    background-color: #fff;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
+}
+
+.user__avatar {
+    border: 0.5px solid grey;
+    height: 65px;
+    width: 65px;
+    margin: auto;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.user__avatar.boy {
+    background-image: url(../images/student_boy_avatar.jpg);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.user__avatar.girl {
+    background-image: url(../images/student_girl_avatar.jpg);
+    background-size:     cover;
+    background-repeat:   no-repeat;
+    background-position: center center;
+}
+
+.user__name {
+    font-size: 12px;
+    color: #1c2117;
+    font-weight: 700;
+    margin: 10px auto 0;
+    width: fit-content;
+}
+
+.user__last__active {
+    margin-left: 30px;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #999;
+    font-family: "Roboto", sans-serif;
+    margin: auto;
+    width: fit-content;
+}
+
+.user__message__button, .user__friend__button {
+    font-size: 10px;
+    width: 50%;
+    margin: auto;
+    cursor: pointer;
+}
+
+.user__buttons__container {
+    text-align: center;
+}
+
+/*END HOME PAGE REGION*/
+
+/*START CONTACT PAGE REGION*/
+
+#contactPage {
+    overflow: hidden;
+    height: 100vh;
+    background-color: aliceblue;
+}
+
+.contact__container {
+    background-color: #303030;
+    width: 40%;
+    margin: 150px auto 0;
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.contact__title {
+    font-size: 20px;
+}
+
+.contact__description {
+    font-size: 16px;
+}
+
+.contact__fields {
+    width: 100%;
+    padding: 0;
+}
+
+.contact__name__container, .contact__email__container, .contact__message__container {
+    width: 100%;
+    color: #a39eb1;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 5px 0;
+}
+
+.contact__message__container {
+    height: 150px;
+}
+
+.contact__message__field {
+    height: 90%;
+}
+
+.contact__name__field, .contact__email__field, .contact__message__field {
+    width: 95%;
+    padding: 10px;
+    background-color: #f6f6f6;
+    border: none;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #e80a09;
+}
+/*END CONTACT PAGE REGION*/
+
+/*START USERS PAGE REGION*/
+
+.page__container {
+    background-color: whitesmoke;
+    padding: 30px;
+    display: flex;
+}
+
+.users__wrapper {
+    width: 30%;
+}
+
+.users__container {
+    width: 100%;
+    margin: 10px 0 0;
+    position: relative;
+    height: 500px;
+}
+
+#usersPage .section__title {
+    margin-left: 10px;
+}
+
+.users__search__container {
+    border: 1px solid #e5e5e5;
+    padding: 25px 20px;
+    margin: 0;
+}
+
+#usersPage .users__search__container .section__title {
+    margin: 20px 0;
+}
+
+.search__field__description {
+    color: rgb(119, 119, 119);
+    margin: 10px 0;
+}
+
+.search__field {
+    width: 100%;
+    margin: 10px 0 20px ;
+}
+
+.locations__wrapper{
+    height:660px;
+    overflow: scroll;
+}
+
+.invitation__sender_wrapper{
+    margin-bottom: 20px;
+
+}
+
+/*END USERS PAGE REGION*/
+
+/*START CHAT REGION*/
+
+.chat__wrapper {
+    position: fixed;
+    bottom: 100px;
+    z-index: 100;
+    background: transparent;
+    right: 0;
+    padding: 0 20px;
+}
+
+.chat__bubbles__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 5px 0;
+}
+
+.chat__bubble {
+    background-image: url("../images/student_boy_avatar.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 45px;
+    width: 45px;
+    border-radius: 50px;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
+    box-shadow: 2px 2px 15px white;
+}
+
+.chat__bubble.highlighted {
+    border: 1px solid blue;
+}
+
+.chat__bubble.unread__message {
+    border: 1px solid red;
+}
+
+
+.op__name {
+    margin: -3px 0;
+    font-size: 13px;
+    padding: 5px 0;
+}
+
+.chat__container {
+    padding: 5px;
+    padding-bottom: 20px;
+    background-color: whitesmoke;
+    margin-top: 5px;
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    box-shadow: 2px 2px 13px;
+    transition: 0.4s all;
+    overflow: hidden;
+}
+
+.user__message, .op__message {
+    width: fit-content;
+    border-radius: 15px;
+    padding: 3px 10px;
+    font-size: 14px;
+    color: white;
+    width: 75%;
+    position: relative;
+    margin: 5px 0;
+    word-break: break-all;
+}
+
+.op__message {
+    float: left;
+    background-color:limegreen;
+}
+
+.user__message {
+    background-color: #CCCD20;
+    float: right;
+}
+
+.write__message__section {
+    width: 100%;
+    margin: 5px 0;
+}
+
+.message__input {
+    width: 60%;
+}
+
+.send__message__button {
+    text-align:  center;
+    padding: 3px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.send__message__button:hover {
+    background-color: #00d5fd;
+}
+
+.conversation__history__section {
+    border-radius: 5px;
+    background-color: white;
+    padding: 5px;
+    border: 1px solid #a39eb1;
+    overflow: auto;
+    height: 85%;
+}
+
+/*END CHAT REGION*/
+
+.users__wrapper{
+    margin-bottom:20px;
+}
+/*START DESIGN RESPONSIVENESS REGION*/
+
+@media screen and (max-width: 1024px) {
+    .feed__container {
+        width: 75%;
+    }
+
+    .contact__container {
+        width: 60%;
+    }
+
+    .users__wrapper{
+        width: 47%;
+    }
+}
+
+/*tablet size*/
+@media screen and (max-width: 768px) {
+    .page__container {
+        display: block;
+    }
+
+    .users__wrapper {
+        width: unset;
+    }
+
+    .feed__container {
+        width: 100%;
+    }
+
+    .contact__container {
+        width: 80%;
+    }
+}
+
+
+
+/*END DESIGN RESPONSIVENESS REGION*/

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Profile</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/home.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/footer.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/my_membership.css" />
+
+    <script src="../scripts/main.js"></script>
+</head>
+
+
+<header class="header">
+    <a href="#default" class="logo">MeetUp</a>
+    <div class="header__right">
+        <a class="active" href="../index.html">Home</a>
+        <a class="dropdown__community" href="users.html">Community
+            <div class="dropdown__community__table">
+                <div class="dropdown_community_content">
+                    <div href="" class="community__menu"><p>My membership</p></div>
+                    <div href="" class="community__menu"><p>Locations</p></div>
+                    <div href="users.html" class="community__menu"><p>Members</p></div>
+                </div>
+            </div>
+        </a>
+        <a href="calendar.html">Calendar</a>
+        <a href="contact.html">Contact</a>
+        <a id="signout">Sign out</a>
+    </div>
+</header>
+
+<body id="usersPage">
+<div class="body__wrapper">
+    <div class="page__container">
+        <div class="users__wrapper">
+            <div class="card">
+                <div class="user__image">
+                    <img src="../images.png">
+                </div>
+                <h1>Timofte Stefan</h1>
+                <p class="title">Student</p>
+                <p>Faculty of Informatics</p>
+                <p>0742059553</p>
+                <p>https://www.facebook.com/timofte.stefan.5</p>
+                <p>stftimofte@gmail.com</p>
+                <p>Field of Expertise: IT</p>
+            </div>
+        </div>
+            <div class="invitation__sender_wrapper">
+                <div class="invitation_sender">
+                    <h2>Send an invitation</h2>
+                    <input type="text" class="invitation__search__field" style="width:25%"  placeholder="Enter the name">
+                    <input type="text" class="invitation__search__field" style="width:25%" placeholder="Enter the location">
+                    <input type="text" class="invitation__search__field" style="width:25%" placeholder="Say when">
+                    <br>
+                    <input type="button" class="button submit__button" id="send_invitation_button" style="margin-top: 10px;" value="Send">
+                </div>
+            </div>
+        <div class="locations__wrapper">
+            <section class="users__search__container">
+                <h2 class="section__title">Find a place to study</h2>
+                <div class="search__field__description">
+                    Enter the location's name bellow!
+                </div>
+                <input type="text" class="search__field" placeholder="Location">
+                <input type="button" class="button submit__button" value="Search">
+                <div class="study__places__wrapper">
+                    <div  class="place__container">
+                        <h3><a href="http://iasi.inoras.ro/loc/c-house-lounge-cafe-5766/">C House Lounge Cafè</a></h3>
+                        <p>
+                            (http://www.chouseitalia.com/iasi/)<br>                                                                <strong>Tel</strong>: 0720 050 311<br>                                <strong>Adresa</strong>: Complex Palas, Iasi<br>
+                            <strong>Program</strong>: L-D: 08.00-01.00
+                        </p>
+                    </div>
+
+                    <div class="place__container">
+                        <h3><a href="http://iasi.inoras.ro/loc/oxford-things-happen-6069/">OXFORD – Things Happen</a></h3>
+                        <p>
+                            (www.oxfordpub.ro)<br>                                                                <strong>Tel</strong>: 0743 941 209<br>                                <strong>Adresa</strong>: Adresa: Strada Sfantul Lazar 64-66, 700049 Iasi, La demisolul Gabriel Bussines Center<br>
+                        </p>
+                    </div>
+
+                    <div class="place__container">
+                        <h3><a href="https://www.facebook.com/pages/category/Bar---Grill/El-Barin-140156452661519/">El Barin</a></h3>
+                        <p>
+                            (www.elbarin.ro)<br>                                 <strong>Email</strong>: el.barin@yahoo.com<br>                                <strong>Tel</strong>: 0726.346.169; 0753 92 00 81<br>                                <strong>Adresa</strong>: Bd-ul Stefan cel Mare si Sfant, nr. 1B, Iasi<br>
+                            <strong>Program</strong>:  Luni- Vineri: 09.30- 01.00 a.m  ​Sambata- Duminica: 10.00- 02.00 a.m
+                        </p>
+                    </div>
+
+                    <div class="place__container">
+                        <h3><a href="https://www.facebook.com/AcajuCafenea/">Acaju</a></h3>
+                        <p>
+                            <strong>Email</strong>: cafeneaua.acaju@yahoo.com<br>                                <strong>Tel</strong>: 0727 255 514<br>                                <strong>Adresa</strong>: Str. Sf.Sava, nr 15<br>
+                            <strong>Program</strong>: L-V: 12.00 - ultimul client, S,D: 14.00 - ultimul client
+                        </p>
+                    </div>
+
+                    <div class="place_container">
+                        <h2><a href="https://www.facebook.com/cafeneauapiataunirii/">Cafeneaua Piata Unirii</a></h2>
+                        <p>
+                            <strong>Tel</strong>: 0743.663.903; mail: cafeneauapiataunirii@gmail.com<br>                                <strong>Adresa</strong>: str. Piata Unirii, nr.6<br>
+                            <strong>Program</strong>: L-D, 08:00 - ultimul client
+                        </p>
+                    </div>
+
+                    <div class="place__container">
+                        <h3><a href="https://www.facebook.com/CofetariaTuffli/">Tuffli</a></h3>
+                        <p>
+                            (http://www.tuffli.ro)<br>                                 <strong>Email</strong>: office@tuffli.ro<br>                                <strong>Tel</strong>: 0721 290812<br>                                <strong>Adresa</strong>: Iasi, Lapusneanu, 7B<br>
+                            <strong>Program</strong>: L-j 8:00-15:300, V-D 9:00-12:00
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+</div>
+</body>
+
+<footer class="footer">
+    Find us //Facebook API + Twitter API + Github API//
+</footer>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyBtBKgcONk3JNkrN1e52SSmMa_qaduuSBU",
+        authDomain: "meetup-48c2d.firebaseapp.com",
+        databaseURL: "https://meetup-48c2d.firebaseio.com",
+        projectId: "meetup-48c2d",
+        storageBucket: "meetup-48c2d.appspot.com",
+        messagingSenderId: "1036777057393"
+    };
+    firebase.initializeApp(config);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+</script>
+
+<script src="../scripts/signout.js"></script>
+
+</html>
