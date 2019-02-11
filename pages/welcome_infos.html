@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/welcome_infos.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/header.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/footer.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+</head>
+
+<header class="header">
+    <a href="#default" class="logo">MeetUp</a>
+    <div class="header__right">
+        <a class="active" href="../index.html">Home</a>
+        <a class="dropdown__community" href="../pages/users.html">Community
+            <div class="dropdown__community__table">
+                <div class="dropdown_community_content">
+                    <div href="" class="community__menu"><p>My membership</p></div>
+                    <div href="" class="community__menu"><p>Locations</p></div>
+                    <div href="/pages/users.html" class="community__menu"><p>Members</p></div>
+                </div>
+            </div>
+        </a>
+        <a href="../pages/calendar.html">Calendar</a>
+        <a href="../pages/contact.html">Contact</a>
+    </div>
+</header>
+
+<body id="homePage">
+
+<div class="body__wrapper">
+    <div id="overlay"></div>
+    <div class="infos_container">
+        <section class="infos_section">
+            <section class="welcome_title_section">
+                <center class="welcome_title_text">Welcome to MeetUP!<br></center>
+            </section>
+            <section class="form_section">
+                <div class="first_text">Finding your friends has never been easier!</div>
+                <div class="location_pack">
+                    <select required autofocus name="Unde Invatam?" class="selector" >
+                        <option disabled selected>Select your location</option>
+                        <option>Biblioteca Gh Asachi</option>
+                        <option>Biblioteca Centrala</option>
+                        <option>Acaju</option>
+                        <option>College Bar</option>
+                        <option>Biblioteca</option>
+                        <option>Timeout</option>
+                        <option>Friends</option>
+                        <option>Locatie X</option>
+                        <option>Locatie X2</option>
+                        <option>Locatie X3</option>
+                        <option>Locatie X4</option>
+                        <option>Locatie X5</option>
+                    </select>
+                </div>
+                <div class="domain_pack">
+                    <select required  name="Ce Invatam?" class="selector" >
+                        <option disabled selected>Select your domain</option>
+                        <option>IT</option>
+                        <option>Medicina</option>
+                        <option>Matematica</option>
+                        <option>Limbi Straine</option>
+                        <option>Limba Romana</option>
+                        <option>Geografie</option>
+                        <option>Geologie</option>
+                        <option>Domain X1</option>
+                        <option>Domain X2</option>
+                        <option>Domain X3</option>
+                        <option>Domain X4</option>
+                        <option>Domain X5</option>
+                    </select>
+                </div>
+                <div class="find_a_buddy_button_container">
+                    <button class="find_a_buddy_button">Find a buddy</button>
+                </div>
+            </section>
+        </section>
+    </div>
+</div>
+</body>
+
+<footer class="footer">
+    Find us //Facebook API + Twitter API + Github API//
+</footer>
+
+<script src="../scripts/home.js"></script>
+<script src="../scripts/chat.js"></script>
+
+</html>
