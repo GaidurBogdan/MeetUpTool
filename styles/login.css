@@ -31,6 +31,7 @@ body {
     height: 556px;
     border-radius: 25px;
     background-color: white;
+    overflow: auto;
 }
 
 .login__welcoming__text__wide {

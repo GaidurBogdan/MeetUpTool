@@ -18,8 +18,8 @@ signupForm.addEventListener('submit', (e) => {
     auth.onAuthStateChanged((user) => {
         db.collection('users').doc(user.uid).set({
             email: email,
-            firstName: "FirstName",
-            lastName: "LastName"
+            firstName: document.getElementById("firstName").value,
+            lastName: document.getElementById("lastName").value
         }).then(returnedValue => {
             window.location.replace("../index.html"); 
             });
