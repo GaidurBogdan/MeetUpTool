@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Microdata markup added by Google Structured Data Markup Helper. -->
+<html><head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Users Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../styles/home.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../styles/header.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="../styles/footer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/home.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/header.css"/>
+    <link rel="stylesheet" type="text/css" media="screen" href="../styles/footer.css"/>
 
     <script src="main.js"></script>
 </head>
 
 
-<header class="header">
+<body id="usersPage"><header class="header">
     <a href="../index.html" class="logo">MeetUP Tool</a>
     <div class="header-right">
         <a class="active" href="../index.html">Home</a>
@@ -31,7 +31,7 @@
     </div>
 </header>
 
-<body id="usersPage">
+
     <div class="body__wrapper">
         <div class="page__container">
             <div class="users__wrapper">
@@ -40,16 +40,17 @@
                         </h2>
             
                         <div class="users__container">
-                            <div class="user__container">
+                            <div itemscope itemtype="http://schema.org/Event" class="user__container">
                                 <div class="user__avatar boy"></div>
-                                <div class="user__name">
+                                <div itemprop="name" class="user__name">
                                     Peter Strongman
                                 </div>
-                                <div class="user__last__active">
+                                <div itemprop="startDate" content="Please insert valid ISO 8601 date/time here. Examples: 2015-07-27 or 2015-07-27T15:30" class="user__last__active">
                                     Active 5min ago    
                                 </div>
                                 <a href="" class="user__message__button link">Message!</a>
-                                <a href="" class="user__friend__button link">Add Friend</a>
+                                <a href="" class="user__friend__button link">
+<span itemprop="description">Add Friend</span></a>
                             </div>
             
                             <div class="user__container">
@@ -95,12 +96,12 @@
                 <div class="search__field__description">
                     Enter the person's name bellow!
                 </div>
-                <input type="text" class="search__field" placeholder="John/Jane Doe">
-                <input type="button" class="button submit__button" value="Search">
+                <input type="text" class="search__field" placeholder="John/Jane Doe"/>
+                <input type="button" class="button submit__button" value="Search"/>
             </section>
         </div>
     </div>
-</body>
+
 
 <footer class="footer">
     Find us //Facebook API + Twitter API + Github API//
@@ -110,22 +111,8 @@
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-auth.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.8.2/firebase-firestore.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBtBKgcONk3JNkrN1e52SSmMa_qaduuSBU",
-    authDomain: "meetup-48c2d.firebaseapp.com",
-    databaseURL: "https://meetup-48c2d.firebaseio.com",
-    projectId: "meetup-48c2d",
-    storageBucket: "meetup-48c2d.appspot.com",
-    messagingSenderId: "1036777057393"
-  };
-  firebase.initializeApp(config);
-
-  const auth = firebase.auth();
-  const db = firebase.firestore();
-</script>
+<script></script>
 
 <script src="../scripts/signout.js"></script>
 
-</html>
+</body></html>

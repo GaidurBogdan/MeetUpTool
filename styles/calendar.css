@@ -88,6 +88,8 @@ button{
 .calendar_container{
     width: 70%;
     display: inline-block;
+    padding-left:20px;
+    padding-top:20px;
 }
 
 .calendar_body{
@@ -239,6 +241,7 @@ tr{
         font-size: medium;
     }
 
+
 }
 
 @media screen and (max-width: 500px){
@@ -258,16 +261,37 @@ tr{
         display:none;
     }
 
+    .num_date{
+        font-size: 50px;
+    }
+
+    .day{
+        font-size: 15px;
+        top:0;
+    }
+
+    .create_event_short{
+        margin-left:10px;
+    }
+
+
+
 }
+
+
+
 
 /* Right side calendar */
 
 .right_side_calendar_container{
-    width: 30%;
+    width: 28%;
     height:554px;
     display: inline-block;
     position:absolute;
     background-color: #2ECC71;
+    padding-top: 20px;
+    padding-right:20px;
+    margin-top:20px;
 }
  /* Hamburger style */
 .hamburger {
@@ -299,6 +323,7 @@ tr{
     padding-left:23%;
     color:white;
     text-align: center;
+    padding-right:60px;
 }
 
 .day {

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>MeetUP Tool Scolarly</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<article resource="#" typeof="schema:ScholarlyArticle">
+    <header>
+        <h1 property="schema:name">MeetUP Tool</h1>
+        <p role="note" property="schema:alternateName">
+            Meet your school friends and pass the exams depression together <a href="https://schema.org/tool">Tool</a>
+        </p>
+    </header>
+    <meta property="schema:accessibilityFeature" content="alternativeText">
+
+    <section typeof="sa:AuthorsList">
+        <h2>Authors</h2>
+        <ul>
+            <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" resource="https://github.com/GaidurBogdan">
+                        <meta property="schema:givenName" content="Bogdan">
+                        <meta property="schema:familyName" content="Gaidur">
+                        <span property="schema:name">Bogdan Gaidur</span>
+                    </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="bgaidur@gmail.com" property="schema:email">bgaidur@gmail.com</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li typeof="sa:ContributorRole" property="schema:author">
+                    <span typeof="schema:Person" resource="https://github.com/timoftestefan">
+                        <meta property="schema:givenName" content="Stefan">
+                        <meta property="schema:familyName" content="Timofte">
+                        <span property="schema:name">Stefan Timofte</span>
+                    </span>
+                <ul>
+                    <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                        <a href="stftimofte@gmail.com" property="schema:email">sermih97@yahoo.com</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Summary</h2>
+        <ol>
+            <li typeof="schema:content" property="schema:citation"><a href="#abstract">
+                Abstract</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#introduction">
+                Introduction</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#goals">
+                Goals</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#web-components">
+                Web components</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#used-technologies">
+                Used technologies</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#user-experience">
+                User experience</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#architecture">
+                Architecture</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#actors-use-cases">
+                Actors and use cases</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#storage-solution">
+                Storage solution</a>
+            </li>
+
+            <li typeof="schema:content" property="schema:citation"><a href="#resource-representation">
+                Resource representation</a>
+            </li>
+
+
+        </ol>
+    </section>
+
+    <section typeof="sa:Affiliations">
+        <h2>Affiliations</h2>
+        <ul>
+            <li id="sa">
+                    <span typeof="schema:Organization" resource="https://science.ai/">
+                        <span property="schema:name">Facultatea de Informatica</span>,
+                        <span property="schema:parentOrganization">
+                            <span typeof="schema:Organization">
+                                <span property="schema:name">"Alexandru Ioan Cuza" Universitatea din Ia?i</span>
+                            </span>
+                        </span>
+                    </span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h3 id="abstract">1. Abstract</h3>
+        <p class="subps" role="note">
+            MeetUP Tool is an application designed for students so they can meet in certain places and study together
+        </p>
+    </section>
+    <section>
+        <h3 id="introduction">2. Introduction</h3>
+        <p class="subps" role="note">
+            Most of the students function better while studying with another one, eventually who has the same problems and preocupations as him.
+            In more simple words, depression caused by exams can unite us.
+        </p>
+    </section>
+
+    <section>
+        <h3 id="goals">3. Goals</h3>
+        <link property="itemListOrder" href="http://schema.org/ItemListUnordered" />
+        <ul>
+            <li property="itemListElement" typeof="ListItem">
+                giving users the possibility of meeting with friends and studying same things at the same time
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+                ability to chat real time locally, inside application
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+                ability to send notifications regarding your schedule
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+                possibility to schedule events in an inside calendar
+            </li>
+        </ul>
+    </section>
+
+    <section typeof="sa:Architecture">
+        <h3 id="web-components">4. Web components</h3>
+        <p>
+            Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps. Custom components and widgets build on the Web Component standards, will work across modern browsers,
+            and can be used with any JavaScript library or framework that works with HTML.
+            <br> Web components are based on existing web standards. Features to support web components are currently being added to the HTML and DOM specs, letting web developers easily extend HTML with new elements with encapsulated styling
+            and custom behavior.
+
+            <br><br>Web components are based on four main specifications:
+
+            <br><br><b>Custom Elements</b>
+            <br>The Custom Elements specification lays the foundation for designing and using new types of DOM elements.
+
+            <br><br><b>Shadow DOM</b>
+            <br>The shadow DOM specification defines how to use encapsulated style and markup in web components.
+
+            <br><br><b>HTML Template</b>
+            <br>The HTML template element specification defines how to declare fragments of markup that go unused at page load, but can be instantiated later on at runtime.
+        </p>
+    </section>
+
+    <section typeof="sa:Technologies">
+        <h3 id="used-technologies">5.Used technologies</h3>
+        <section>
+            <h3>HTML</h3>
+            <ul>
+                <li>
+                    <p>
+                        <cite property="schema:name">
+                            <a href="https://en.wikipedia.org/wiki/HTML">HyperText Markup Language </a>
+                        </cite>Hypertext markup language (HTML) is the major markup language used to display Web pages on the Internet. In other words, Web pages are composed of HTML,
+                        which is used to display text,
+                        images or other resources through a Web browser.</p>
+                </li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h3>CSS</h3>
+            <ul>
+                <li>
+                    <p>
+                        <cite property="schema:name">
+                            <a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">CSS</a>
+                        </cite>
+                        CSS helps Web developers create a uniform look across several pages of a Web site. Instead of defining the style of each table and each block of text within a page's HTML, commonly used styles
+                        need to be defined only once in a CSS document. Once the style is defined in cascading style sheet,
+                        it can be used by any page that references the CSS file.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h3>JavaScript</h3>
+            <ul>
+                <li>
+                    <p>
+                        <cite property="schema:name">
+                            <a href="https://ro.wikipedia.org/wiki/JavaScript">Java Script</a>
+                        </cite> JavaScript is a client-side scripting language, which means the source code is processed by the client's web browser rather than on the web server.
+                        This means JavaScript functions can run after a webpage has loaded without communicating with the server.
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </section>
+
+    <section typeof="sa:User">
+        <h3 id="user-experience">6. User experience</h3>
+
+        <link property="itemListOrder" href="http://schema.org/ItemListOrderAscending" />
+        <ul property="steps">
+            <li property="itemListElement" typeof="ListItem">
+                The first thing user can do is to create an account or to check in at a certain location(if he/she already has an account)
+            </li>
+            <li property="itemListElement" typeof="ListItem">
+                When the user check-ins in a location, his/her friends are gonna be notified
+            </li>
+
+            <li property="itemListElement" typeof="ListItem">
+                The My Profile section allows you to design your favorite locations and domains
+            </li>
+            <li> property="itemListElement" typeof="ListItem">
+                A button is showned in the bottom-right of the page and he can add an event by clicking it. It will post to your friends a notification and/or an invitation.
+            </li>
+            <li>
+                Now with the new <a href="https://schema.org/Restaurants">event</a> created the user can do whatever he likes. He maybe wants to view it, edit it or why not delete it.
+                For every action a modal will be shown like it is explained before except for the case when he wants to delete it
+                so be careful.
+            </li>
+        </ul>
+    </section>
+    <section typeof="sa:Architecture">
+        <h3 id="architecture">7.Architecture</h3>
+        <h4>Home</h4>
+        <p>
+            Main page who feeds you the activity of your friends.
+        </p>
+        <h4>My Profile</h4>
+        <p>This is the menu which gives the user the most <a href="https://schema.org/UserInteraction"> interation</a> with the application. It has a lot of features:</p>
+        <ul>
+            <li>Location search button</li>
+            <li>Friends search button</li>
+            <li>Modify your personal information</li>
+        </ul>
+        <img src="Printscreen_my_profile.jpg" style="width:300px; height: 200px;">
+        <h4>Calendar</h4>
+        <p>It shows the user the interface of the calendar and leth him to opperate on events</p>
+        <ul>
+            <li>ADD EVENT</li>
+            <li>EDIT EVENT</li>
+            <li>REMOVE EVENT</li>
+            <li>SELECT MONTH WHEN IN YEAR VIEW</li>
+        </ul>
+        <img src="Printscreen_calendar.jpg" style="width:300px; height: 200px;">
+    </section>
+    <section typeof="sa:Actors">
+        <h3 id="actors-use-cases">8. <a href="https://schema.org/actor">Actors</a> and use cases</h3>
+        <ul>
+            <li style="font-weight: bold;">Actors: </li>
+
+            <li style="list-style-type: none;">1. Application</li>
+            <li style="list-style-type: none;">2. Calendar</li>
+            <li style="list-style-type: none;">3. Local Storage</li>
+            <li style="list-style-type: none;">4. Owner</li>
+            <li style="list-style-type: none;">5. User</li>
+
+
+            <li style="font-weight: bold;">Use cases: </li>
+        </ul>
+
+        <ol>
+            <li style="padding: 10px;">
+                <h4>Check in:</h4>
+                <ol>
+                    <li style="padding: 5px;">User acceses his account.</li>
+                    <li style="padding: 5px;">User is welcomed by a welcome page and he enters the location and field of study.</li>
+                    <li style="padding: 5px;">The application sets in local storage the options chosen by the user.</li>
+                    <li style="padding: 5px;">The page will redirect the user to home page, where he can see the feed of his friends</li>
+                </ol>
+            </li>
+
+            <li style="padding: 10px;">
+                <h4>Edit calendar:</h4>
+                <ol>
+                    <li style="padding: 5px;">User accesses the application.</li>
+                    <li style="padding: 5px;">User clicks on the Calendar page</li>
+                    <li style="padding: 5px;">User has to select a date, manually or jumping straight to it.</li>
+                    <li style="padding: 5px;">User can create an event</li>
+                    <li style="padding: 5px;">The application stores in local database the event crated</li>
+                </ol>
+            </li>
+
+            <li style="padding: 10px;">
+                <h4>Calendar jump:</h4>
+                <ol>
+                    <li style="padding: 5px;">User accesses the application.</li>
+                    <li style="padding: 5px;">User selects the year and month to view</li>
+                    <li style="padding: 5px;">User presses the button jump to</li>
+                    <li style="padding: 5px;">The calendar will be displayed how the user selected</li>
+                </ol>
+            </li>
+
+            <li style="padding: 10px;">
+                <h4>Add event:</h4>
+                <ol>
+                    <li style="padding: 5px;">User accesses the Calendar Page.</li>
+                    <li style="padding: 5px;">User clicks on the "Add event" button.</li>
+                    <li style="padding: 5px;">User has to select his options for the event.</li>
+                    <li style="padding: 5px;">The application adds the event in local storage.</li>
+                    <li style="padding: 5px;">The application displays the event on the page.</li>
+                </ol>
+            </li>
+
+            <li style="padding: 10px;">
+                <h4>Remove event:</h4>
+                <ol>
+                    <li style="padding: 5px;">User accesses the application.</li>
+                    <li style="padding: 5px;">User clicks on the "Remove event" button.</li>
+                    <li style="padding: 5px;">The application removes the event from local storage.</li>
+                    <li style="padding: 5px;">The application deletes the event from the page.</li>
+                </ol>
+            </li>
+
+            <li style="padding:10px;">
+                <h4>Search Location:</h4>
+                <ol>
+                    <li style="padding: 5px;">User access My Profile page</li>
+                    <li style="padding: 5px;">User types in the search bar the name of the location that he is looking for</li>
+                    <li style="padding: 5px;">User can see how many of his friends are at that location at the moment</li>
+                    <li style="padding: 5px;">User goes and meet his friends</li>
+                </ol>
+            </li>
+
+            <li style="padding:10px;">
+                <h4>Real time chat</h4>
+                <ol>
+                    <li style="padding: 5px;">User searches for friends through the search bar</li>
+                    <li style="padding: 5px;">User hits the Message button </li>
+                    <li style="padding: 5px;">Application creates a small chat head in the right bottom corner</li>
+                    <li style="padding: 5px;">User starts chatting in real time with his friend</li>
+                </ol>
+            </li>
+
+        </ol>
+    </section>
+    <section sa="typeof:Storage">
+        <h3 id="storage-solution">9.Storage solution</h3>
+        <p>Aproximating the fact that the application will not need a lot of amount of memory, we chose to store data in local storage.</p>
+    </section>
+    <section>
+        <h3 id="resource-representation">10. <a href="https://schema.org/docs/datamodel.html">Resource representation</a></h3>
+        <p>
+            The singleton design pattern is used when it comes to Calendar class.
+            The calendar contains data about the events and the options, which are also part of the model of the application.
+            There is also an EventManager class which handles the event opperations.
+        </p>
+        <p>User attributes</p>
+        <ul>
+            <li>id</li>
+            <li>name</li>
+            <li><a href="https://schema.org/Date">field of expertise</a></li>
+            <li><a href="https://schema.org/attendee">email</a></li>
+            <li><a href="https://schema.org/location">location</a></li>
+            <li>phone number</li>
+            <li><a href="https://schema.org/description">description</a></li>
+        </ul>
+
+    </section>
+</article>
+</body>
+
+</html>

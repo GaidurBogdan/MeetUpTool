@@ -1,9 +1,0 @@
-Test
-
-Prima prezentare va avea in vedere doar partea de front-end ce va cuprinde 4 pagini html principale : 
-  -Login page (redirectionarea se va face automat de oriunde va fi accesat site-ul)
-  -Social page = feed cu informatii legate de prieteni de pe retelele sociale care folosesc aceeasi aplicatie 
-  -Infos page = locul de unde se va face postarea propriu zisa si se poate face invitatia "la cafea"
-        ex : Ion Ionescu este la Facultatea de Informatica lucrand la CLIW 
-  -Calendar page = se vor afisa si programari ale prietenilor comuni in cazul in care se doreste intrevederea
-  
