@@ -21,7 +21,7 @@ signupForm.addEventListener('submit', (e) => {
             firstName: document.getElementById("firstName").value,
             lastName: document.getElementById("lastName").value
         }).then(returnedValue => {
-            window.location.replace("../welcome_infos.html"); 
+            window.location.replace("../pages/welcome_infos.html"); 
             });
       });
 } );
