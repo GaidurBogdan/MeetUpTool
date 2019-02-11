@@ -141,11 +141,13 @@ document.addEventListener('submit', function (event) {
 
 //render all users
 db.collection('users').get().then( (snapshot) => {
-    document.getElementsByClassName("feed__section__title")[0].innerHTML += snapshot.docs.length;
+    document.getElementsByClassName("feed__section__title")[0].innerHTML += snapshot.docs.length -1;
 
     snapshot.docs.forEach(doc => {
-        let newUser = new User(doc);
-        newUser.renderUser(document.getElementsByClassName("feed__section")[0]);
+        if (doc.id != auth.currentUser.uid) {
+            let newUser = new User(doc);
+            newUser.renderUser(document.getElementsByClassName("feed__section")[0]);
+        }
     });
 });
 
