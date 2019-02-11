@@ -5,10 +5,26 @@ var chatContainer = document.getElementsByClassName("chat__container")[0];
 
 document.addEventListener('click', function (event) {
 
+    //clicking on 'x' button to close chat bubble
+    if (event.target.matches("#close__chat__button")) {
+        let children = document.getElementsByClassName("chat__bubbles__list")[0].children;
+
+        for (let i = 0; i < children.length; i++) {
+            let child = children[i];
+            if (child.id == chatContainer.id) {
+                chatContainer.classList.add("hidden");
+                child.remove();
+            }
+        }
+    }
+
     //clicking on a chat bubble event handler
 	if (event.target.matches('.chat__bubble')) {
         let bubble = event.target;
-        
+
+        //change focus on the input field
+        document.getElementsByClassName("message__input")[0].focus();
+
         bubble.classList.remove("unread__message");
 
         if (chatContainer.classList.contains("hidden")) {
@@ -50,7 +66,6 @@ document.addEventListener('click', function (event) {
                 conversationEntity.replaceChatHistory(doc.data().messages);
             });
         });
-
     }
 
     //clicking on a write message button 
@@ -139,22 +154,29 @@ document.addEventListener('submit', function (event) {
 
 }, false);
 
-//render all users
-db.collection('users').get().then( (snapshot) => {
-    document.getElementsByClassName("feed__section__title")[0].innerHTML += snapshot.docs.length -1;
+//render all users at your location
 
-    snapshot.docs.forEach(doc => {
-        if (doc.id != auth.currentUser.uid) {
-            let newUser = new User(doc);
-            newUser.renderUser(document.getElementsByClassName("feed__section")[0]);
-        }
+auth.onAuthStateChanged(user => {
+    db.collection('users').doc(user.uid).get().then(myDoc => {
+        var myLocation = myDoc.data().location;
+        db.collection('users').get().then( (snapshot) => {
+            var nrOfUsers = 0;
+            snapshot.docs.forEach(doc => {
+                if (doc.id != auth.currentUser.uid && doc.data().location == myLocation) {
+                    nrOfUsers ++;
+                    let newUser = new User(doc);
+                    newUser.renderUser(document.getElementsByClassName("feed__section")[0]);
+                }
+            });
+            let sectionTitle = document.getElementsByClassName("feed__section__title")[0];
+            sectionTitle.innerHTML += myLocation + " right now - " + nrOfUsers;
+        });
     });
 });
 
-
 //listen to all the conversation the current user is involved in
 /*
-db.collection("conversations").then(snapshot => {
+db.collection("conversations").get().then(snapshot => {
     snapshot.docs.forEach(doc => {
         if (doc.data().ID1 == auth.currentUser.uid || doc.data().ID2 == auth.currentUser.uid) {
             doc.onSnapshot(function(doc) {

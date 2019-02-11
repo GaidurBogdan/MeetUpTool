@@ -7,7 +7,7 @@ loginForm.addEventListener('submit', (e) => {
     var password = document.getElementById('password').value;
 
     auth.signInWithEmailAndPassword(email, password).then(cred => {
-        window.location.replace("../index.html"); 
+        window.location.replace("../pages/welcome_infos.html"); 
     }).catch(function(error) {
         // Handle Errors here.
         var errorCode = error.code;
