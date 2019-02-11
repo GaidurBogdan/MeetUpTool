@@ -304,6 +304,7 @@ body {
 }
 
 .chat__container {
+    position: relative;
     padding: 5px;
     padding-bottom: 20px;
     background-color: whitesmoke;
@@ -314,7 +315,23 @@ body {
     border: 1px solid grey;
     box-shadow: 2px 2px 13px;
     transition: 0.4s all;
-    overflow: hidden;
+}
+
+#close__chat__button {
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    height: 15px;
+    width: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#close__chat__button:hover {
+    color: red;
+    background-color: navajowhite;
 }
 
 .user__message, .op__message {
@@ -326,7 +343,7 @@ body {
     width: 75%;
     position: relative;
     margin: 5px 0;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .op__message {
