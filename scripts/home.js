@@ -155,7 +155,6 @@ document.addEventListener('submit', function (event) {
 }, false);
 
 //render all users at your location
-
 auth.onAuthStateChanged(user => {
     if (window.location.pathname.split("/").pop() == "index.html") {
         db.collection('users').doc(user.uid).get().then(myDoc => {
