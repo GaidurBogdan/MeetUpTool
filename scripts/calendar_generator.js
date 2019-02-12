@@ -116,6 +116,7 @@ document.addEventListener('click', function (event) {
 
     //add the selected meeting on click
     if (event.target.matches(".add")) {
+        console.log(selectMonth.value)
         var meetingName = document.getElementById("bigDate").value;
 
         if (meetingName == "") {
@@ -131,7 +132,7 @@ document.addEventListener('click', function (event) {
                 db.collection("meetings").add({
                     OwnerID: auth.currentUser.uid,
                     day: selectedDateElement.innerText,
-                    month: selectMonth.value + 1,
+                    month: parseInt(selectMonth.value) + 1,
                     year: selectYear.value,
                     name: meetingName
                 }).catch(function(error) {
